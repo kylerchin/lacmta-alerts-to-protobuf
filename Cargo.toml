@@ -1,13 +1,15 @@
 [package]
-name = "lacmta-alerts-to-protobuf"
+name = "lacmta-alerts-protobuf"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+color-eyre = "0.6.2"
 gtfs-rt = "0.3.0"
 prost = "0.11.9"
 reqwest = {version = "0.11.18", features = ["brotli", "json"]}
 serde = {version="1.0.174", features=["derive"]}
 serde_json = "1.0.103"
+tokio = { version = "1.29.1", features = ["full"] }
