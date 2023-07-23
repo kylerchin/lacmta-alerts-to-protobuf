@@ -106,7 +106,7 @@ pub async fn download_to_structure() -> Result<gtfs_rt::FeedMessage, Box<dyn Err
     .await?
     .json::<lametro_json_response>().await?;
 
-    println!("body = {:#?}", body);
+    //println!("body = {:#?}", body);
 
     let entity: Vec<gtfs_rt::FeedEntity> = body
         .alerts
