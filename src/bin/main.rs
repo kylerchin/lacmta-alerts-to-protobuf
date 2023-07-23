@@ -31,9 +31,9 @@ async fn main() -> Result<()> {
 
     let mut lastloop = Instant::now();
 
-    let bus_id = "f-metrolosangeles~bus~rt";
+    let bus_id = "f-metro~losangeles~bus~rt";
 
-    let rail_id = "f-metrolosangeles~rail~rt";
+    let rail_id = "f-metro~losangeles~rail~rt";
 
     loop {
         lastloop = Instant::now();
