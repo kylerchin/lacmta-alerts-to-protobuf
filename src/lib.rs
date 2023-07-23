@@ -141,11 +141,40 @@ pub async fn download_to_structure() -> Result<gtfs_rt::FeedMessage, Box<dyn Err
                 })
                 .collect();
 
+            let cause:i32 = match alert.cause.as_str() {
+                "UNKNOWN_CAUSE" => 1,
+                "OTHER_CAUSE" => 2,  // Not machine-representable.
+                "TECHNICAL_PROBLEM" => 3,
+                "STRIKE" => 4,         // Public transit agency employees stopped working.
+                "DEMONSTRATION" => 5,  // People are blocking the streets.
+                "ACCIDENT" => 6,
+                "HOLIDAY" => 7,
+                "WEATHER" => 8,
+                "MAINTENANCE" => 9,
+                "CONSTRUCTION" => 10,
+                "POLICE_ACTIVITY" => 11,
+                "MEDICAL_EMERGENCY" => 12,
+                _ => 1 //unknown
+            };
+
+            let effect:i32 = match alert.effect.as_str() {
+                "NO_SERVICE" => 1,
+                "REDUCED_SERVICE" => 2,
+                "SIGNIFICANT_DELAYS" => 3,
+                "DETOUR" => 4,
+                "ADDITIONAL_SERVICE" => 5,
+                "MODIFIED_SERVICE" => 6,
+                "OTHER_EFFECT" => 7,
+                "UNKNOWN_EFFECT" => 8,
+                "STOP_MOVED" => 9,
+                _ => 8 //known
+            };
+
             gtfs_rt::FeedEntity {
                 alert: Some(gtfs_rt::Alert {
                     //todo: cause and effect
-                    cause: Some(0),
-                    effect: Some(0),
+                    cause: Some(cause),
+                    effect: Some(effect),
                     header_text: Some(header_translation),
                     description_text: match alert.description_text {
                         Some(description_text) => Some(gtfs_rt::TranslatedString {
