@@ -14,7 +14,7 @@ and
 
 ### Running the binary
 
-The runtime `bin/main.rs` is a script that runs `req_into_split_feeds_bytes()` every 10 seconds and inserts the compressed protobuf bytes into redis keys `gtfsrt|f-metrolosangeles~rail~rt|alerts` and `gtfsrt|f-metrolosangeles~rail~rt|alerts`
+The runtime `bin/main.rs` is a script that runs `req_into_split_feeds_bytes()` every 10 seconds and inserts the compressed protobuf bytes into redis keys `gtfsrt|f-metro~losangeles~rail~rt|alerts` and `gtfsrt|f-metro~losangeles~rail~rt|alerts`
 
 This is compatible with the [kylerchin/kactus-gtfs-rt](https://github.com/kylerchin/kactus-gtfs-rt/) server. It can be published as a web API using the kactus server.
 
