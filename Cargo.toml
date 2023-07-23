@@ -3,7 +3,7 @@ name = "lacmta-alerts-protobuf"
 version = "0.1.0"
 edition = "2021"
 license = "AGPL-3.0-only"
-description = "Download LA Metro Service Alerts & Convert into Protobuf"
+description = "LA Metro Service Alerts Fetch & Convertion into Protobuf"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
