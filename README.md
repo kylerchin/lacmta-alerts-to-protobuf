@@ -1,7 +1,9 @@
 # Los Angeles Protobuf Alerts
 
-Los Angeles Metro currently does not share alerts with the public in the Protobuf format. However, the service alerts page json seems compatible. It is presented in Json format.
+Los Angeles Metro did not share alerts with the public in the Protobuf format. However, the service alerts page json seems compatible. It is presented in Json format.
 I was able to convert it to Protobuf using the `gtfs_rt` crate.
+
+Project was deprecated 63 hours later, LA Metro responded by publishing https://s3.amazonaws.com/la-alerts-prod/alerts.pb 🎉🎉🎉🎉🎉
 
 My version of the feeds are hosted at 
 
