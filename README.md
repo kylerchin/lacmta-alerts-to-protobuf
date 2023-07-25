@@ -11,6 +11,10 @@ and
 
 `https://kactusapi.kylerchin.com/gtfsrt/?feed=f-metro~losangeles~rail~rt&category=alerts`
 
+#### Human Readable json:
+
+`https://kactusapi.kylerchin.com/gtfsrtasjson/?feed=f-metro~losangeles~bus~rt&category=alerts`
+`https://kactusapi.kylerchin.com/gtfsrtasjson/?feed=f-metro~losangeles~rail~rt&category=alerts`
 
 ### Running the binary
 
