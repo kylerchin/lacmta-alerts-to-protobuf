@@ -5,11 +5,11 @@ I was able to convert it to Protobuf using the `gtfs_rt` crate.
 
 My version of the feeds are hosted at 
 
-`https://kactusapi.kylerchin.com/gtfsrtasjson/?feed=f-metro~losangeles~bus~rt&category=alerts`
+`https://kactusapi.kylerchin.com/gtfsrt/?feed=f-metro~losangeles~bus~rt&category=alerts`
 
 and
 
-`https://kactusapi.kylerchin.com/gtfsrtasjson/?feed=f-metro~losangeles~rail~rt&category=alerts`
+`https://kactusapi.kylerchin.com/gtfsrt/?feed=f-metro~losangeles~rail~rt&category=alerts`
 
 
 ### Running the binary
