@@ -102,6 +102,7 @@ fn gtfs_string_to_timestamp(x: String) -> Option<u64> {
 }
 
 pub async fn download_to_structure() -> Result<gtfs_rt::FeedMessage, Box<dyn Error>> {
+    //api key is intentionally exposed, it is public and belongs to LA Metro
     let body = reqwest::get("https://alerts.metroservices.io/developer/api/v2/alerts?api_key=4oJedLBt80WP-d7E6Ekf5w&format=json")
     .await?
     .json::<lametro_json_response>().await?;
